@@ -79,7 +79,7 @@ section { padding: 80px 10% 40px; }
     text-align: center; transition: 0.4s ease; border: 1px solid transparent;
 }
 .service-card:hover { 
-    transform: scale(1.08); /* ලොකු කුඩා වීම */
+    transform: scale(1.08);
     border-color: #22d3ee; 
     box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
 }
@@ -93,8 +93,7 @@ section { padding: 80px 10% 40px; }
 }
 .skill-box:hover { transform: scale(1.15); background: #22d3ee; color: #020617; font-weight: bold; }
 
-/* Contact Gap Reduction */
-.skills { padding-bottom: 30px; }
+/* Contact Style */
 .contact { padding-top: 30px; }
 .contact form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
 input, textarea { width: 100%; padding: 15px; background: #1e293b; border-radius: 10px; color: #fff; }
