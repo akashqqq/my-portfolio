@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none; border: none; outline: none;
+    scroll-behavior: smooth;
+}
+
+body { background: #0f172a; color: #e5e7eb; overflow-x: hidden; }
+
+/* Header */
+.header {
+    position: fixed; top: 0; width: 100%; padding: 20px 10%;
+    background: rgba(2, 6, 23, 0.95); display: flex; 
+    justify-content: space-between; align-items: center; z-index: 1000;
+}
+.logo { font-size: 25px; font-weight: 700; }
+.logo span { color: #22d3ee; }
+.navbar a { font-size: 16px; color: #e5e7eb; margin-left: 35px; transition: 0.3s; }
+.navbar a:hover, .navbar a.active { color: #22d3ee; }
+#menu-icon { font-size: 32px; display: none; cursor: pointer; color: #fff; }
+
+/* Sections Base */
+section { padding: 80px 10% 40px; }
+
+/* Image Animation (Pulse) */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+.home-img img {
+    width: 320px; border-radius: 50%; border: 5px solid #22d3ee;
+    box-shadow: 0 0 20px #22d3ee; animation: pulse 3s infinite ease-in-out;
+}
+
+/* Home Section */
+.home { display: flex; align-items: center; justify-content: center; gap: 50px; min-height: 100vh; }
+.home-content h1 { font-size: 50px; margin-bottom: 5px; }
+.home-content h3 { font-size: 28px; color: #22d3ee; margin-bottom: 15px; }
+
+/* Social Icons Gap & Style */
+.social-icons { margin: 25px 0; display: flex; gap: 15px; }
+.social-icons a {
+    width: 45px; height: 45px; display: inline-flex;
+    justify-content: center; align-items: center;
+    background: transparent; border: 2px solid #22d3ee;
+    border-radius: 50%; font-size: 20px; color: #22d3ee;
+    transition: 0.5s ease;
+}
+.social-icons a:hover {
+    background: #22d3ee; color: #020617; box-shadow: 0 0 15px #22d3ee;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block; padding: 12px 28px; background: #22d3ee;
+    border-radius: 40px; color: #020617; font-weight: 600;
+    cursor: pointer; transition: 0.3s ease; margin-top: 10px;
+}
+.btn:hover { box-shadow: 0 0 15px #22d3ee; transform: scale(1.05); }
+
+/* About Section */
+.about { display: flex; align-items: center; justify-content: center; gap: 60px; background: #1e293b; min-height: 100vh; }
+.about-img img { width: 350px; border-radius: 20px; transition: 0.4s; border: 2px solid #22d3ee; }
+.about-img img:hover { transform: scale(1.03); }
+.about-content h2 { font-size: 40px; margin-bottom: 20px; }
+.about-content span { color: #22d3ee; }
+.skill-btn { margin-top: 20px; }
+
+/* Services & Skills Titles */
+.services h2, .skills h2, .contact h2 { text-align: center; font-size: 40px; margin-bottom: 35px; }
+.services span, .skills span, .contact span { color: #22d3ee; }
+
+/* Services Card Animation */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.service-card {
+    background: #020617; padding: 35px; border-radius: 15px;
+    text-align: center; transition: 0.4s ease; border: 1px solid transparent;
+}
+.service-card:hover { 
+    transform: scale(1.08); /* ලොකු කුඩා වීම */
+    border-color: #22d3ee; 
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}
+.service-card i { font-size: 45px; color: #22d3ee; margin-bottom: 20px; }
+
+/* Skills Zoom */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.skill-box {
+    background: #1e293b; padding: 20px; border-radius: 12px;
+    text-align: center; font-weight: 500; transition: 0.4s;
+}
+.skill-box:hover { transform: scale(1.15); background: #22d3ee; color: #020617; font-weight: bold; }
+
+/* Contact Gap Reduction */
+.skills { padding-bottom: 30px; }
+.contact { padding-top: 30px; }
+.contact form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+input, textarea { width: 100%; padding: 15px; background: #1e293b; border-radius: 10px; color: #fff; }
+
+footer { background: #020617; padding: 20px; text-align: center; margin-top: 40px; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #menu-icon { display: block; }
+    .navbar {
+        position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem 3%;
+        background: #020617; display: none;
+    }
+    .navbar.active { display: block; }
+    .navbar a { display: block; margin: 20px 0; }
+    .home, .about { flex-direction: column; text-align: center; padding-top: 120px; }
+}
